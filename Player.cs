@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private bool isGrounded;
 
+    public int score;
+
     void Update()
     {
         //Get Horizontal and Vertical inputs
@@ -48,5 +50,10 @@ public class Player : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
     }
 }
