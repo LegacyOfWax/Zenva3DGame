@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
 
     public int score;
+    public UI ui;
 
     void Update()
     {
@@ -53,7 +54,8 @@ public class Player : MonoBehaviour
     }
 
     public void AddScore(int amount)
-    {
+    {  
         score += amount;
+        ui.SetScoreText(score);
     }
 }
